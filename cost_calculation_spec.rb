@@ -34,6 +34,8 @@ describe CostCalculation do
       cost_calc = CostCalculation.new
 
       expect(cost_calc.daily_cost(start_date, end_date, single_time_period).length).to eq(5)
+      expect(cost_calc.daily_cost(start_date, end_date, single_time_period)[0][:cost]).to eq(15)
+
     end
 
     it "calculate the daily cost for a multiple periods ~ Mixed (Daily, Weekly, Monthly)" do
